@@ -1,7 +1,8 @@
 import express from "express";
-import { IndexHome } from "../controllers/PlayerCon.js";
+import { PLAYER } from "../controllers/PlayerCon.js";
 
 export const PlayerRt = express.Router();
-    PlayerRt.get("/", IndexHome);
+    PlayerRt.post("/", PLAYER.Create);
+    PlayerRt.get("/", PLAYER.FetchAll);
 
 
