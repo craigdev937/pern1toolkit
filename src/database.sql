@@ -1,4 +1,4 @@
-CREATE DATABASE pern1toolkit;
+-- CREATE DATABASE pern1toolkit;
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 CREATE TABLE players(
