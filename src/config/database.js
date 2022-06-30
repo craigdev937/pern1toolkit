@@ -9,10 +9,4 @@ export const pool = new Pool({
 });
 
 
-// export const pool = new Pool({
-//     user: "django",
-//     password: "password1",
-//     host: "localhost",
-//     port: 5432,
-//     database: "pern1toolkit"
-// });
+
