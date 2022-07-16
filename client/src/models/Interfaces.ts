@@ -1,5 +1,5 @@
 export interface IPlayer {
-    id?: string,
+    id: string | undefined,
     first: string,
     last: string,
     age: number,
