@@ -9,7 +9,7 @@ class PlayerClass {
             VALUES ($1, $2, $3, $4) RETURNING *`;
             const values = [first, last, age, info];
             const newPlayer = await pool.query(createQuery, values);
-            res.json(newPlayer.rows[0]);
+            res.status(200).json(newPlayer.rows[0]);
         } catch (error) {
             res.status(500).json({msg: error.message});
             next(error);
@@ -20,7 +20,7 @@ class PlayerClass {
         try {
             const fetchAllQry = "SELECT * FROM players";
             const allPlayers = await pool.query(fetchAllQry);
-            res.json(allPlayers.rows);
+            res.status(200).json(allPlayers.rows);
         } catch (error) {
             res.status(500).json({msg: error.message});
             next(error);
@@ -36,7 +36,7 @@ class PlayerClass {
             `;
             const values = [id];
             const player = await pool.query(getOneQry, values);
-            res.json(player.rows[0]);
+            res.status(200).json(player.rows[0]);
         } catch (error) {
             res.status(500).json({msg: error.message});
             next(error);
