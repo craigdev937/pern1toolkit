@@ -1,12 +1,13 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { PlayerAPI } from "../global/PlayerAPI";
 
 export const Add = (): JSX.Element => {
     const navigate = useNavigate();
     const [addPlayer] = PlayerAPI.useAddMutation();
     const [player, setPlayer] = React.useState({
-        first: "", last: "", age: 0, info: ""
+        id: "", first: "", last: "", 
+        age: 0, info: ""
     });
 
     const handleChange = 
@@ -20,7 +21,7 @@ export const Add = (): JSX.Element => {
         event.preventDefault();
         await addPlayer(player);
         setPlayer({
-            first: "", last: "", age: 0, info: ""
+            id: "", first: "", last: "", age: 0, info: ""
         });
         navigate("/");
     };

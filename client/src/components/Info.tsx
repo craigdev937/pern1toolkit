@@ -6,7 +6,7 @@ type Props = {
     player: IPlayer
 };
 
-export const Info = ({player}: Props): JSX.Element => {    
+export const Info = ({player}: Props) => {    
     return (
         <React.Fragment>
             <h2>

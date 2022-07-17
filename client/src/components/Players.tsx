@@ -5,7 +5,8 @@ import { PlayerAPI } from "../global/PlayerAPI";
 import { Info } from "./Info";
 
 export const Players = (): JSX.Element => {
-    const { error, isLoading, data } = PlayerAPI.useFetchAllQuery();
+    const { error, isLoading, data } = 
+        PlayerAPI.useFetchAllQuery();
 
     React.useEffect(() => {
         if (error) toast.error("Something went wrong!");
